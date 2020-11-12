@@ -1,9 +1,14 @@
+$textColor: white;
+
 .Footer {
     width: 100%;
-    padding: 4rem;
+    padding: 2rem;
     text-align: center;
     opacity: 0;
+    color: $textColor;
 
+    background: rgb(124,97,187);
+    background: linear-gradient(333deg, rgba(124,97,187,1) 0%, rgba(96,63,203,1) 58%, rgba(149,135,191,1) 100%);
 
     .info-container {
         display: flex;
@@ -18,6 +23,10 @@
             margin: 1rem;
             transition: all 1s;
 
+            a {
+                color: $textColor
+            }
+
             &:hover {
                 transform: scale(1.1);
                 opacity: 0.8;
@@ -28,7 +37,7 @@
     }
 
     p {
-        margin: 1.5rem;
+        margin: 1rem 1rem 1.5rem;
     }
 
 
@@ -40,6 +49,8 @@
 
         a {
             transition: all 1s;
+            color: $textColor;
+
 
             &:hover {
                 transform: scale(1.2);
@@ -50,7 +61,7 @@
     }    
     
     &.fade-footer-in {
-        animation: 2s linear forwards fadeFooterIn;
+        animation: 1s linear forwards fadeFooterIn;
     }
 
 }

@@ -11,6 +11,8 @@ import Footer from '../../containers/footer/Footer.component';
 
 import Modal from '../../components/modal/Modal.component';
 
+import inView from '../../helpers/inView';
+
 const Home = ({
         windowState: { skillsDomElement, quoteDomElement, currentRoleDomElement, footerDomElement },
         modalState: { modalClasses }
@@ -52,6 +54,7 @@ const Home = ({
             <Quote animate={animateQuote} />
             <Skills animate={animateSkills} />
             <CurrentRole animate={animateCurrentRole}/>
+            <section style={{height: '80vh'}}></section>
             <Footer animate={animateFooter} />
         </main>
     )
@@ -63,27 +66,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(Home);
-
-function inView(element) {
-
-    const currentPosition = window.pageYOffset + window.innerHeight;
-
-    const offsetTop = calculateOffsetTop(element);
-
-    if(currentPosition >= (offsetTop + 50)) {
-        return true;
-    }
-
-    return false;
-}
-
-function calculateOffsetTop (el) {
-    let y = 0; 
-
-    while(el) {
-        y += el.offsetTop - el.scrollTop + el.clientTop;
-        el = el.offsetParent;
-    }
-    
-    return y;
-}
