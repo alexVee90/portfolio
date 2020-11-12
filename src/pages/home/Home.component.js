@@ -12,13 +12,15 @@ import Footer from '../../containers/footer/Footer.component';
 import Modal from '../../components/modal/Modal.component';
 
 const Home = ({
-        windowState: { skillsDomElement, quoteDomElement, currentRoleDomElement },
+        windowState: { skillsDomElement, quoteDomElement, currentRoleDomElement, footerDomElement },
         modalState: { modalClasses }
     }) => {
 
     let [animateSkills, toggleAnimateSkills] = useState(false);
     let [animateQuote, toggleAnimateQuote] = useState(false);
     let [animateCurrentRole, toggleAnimateCurrentRole] = useState(false);
+    let [animateFooter, toggleAnimateFooter] = useState(false);
+
 
     useEffect( () => {        
         const handleScroll = e => {
@@ -30,6 +32,9 @@ const Home = ({
             }
             if(inView(currentRoleDomElement)) {
                 toggleAnimateCurrentRole(true)
+            }
+            if(inView(footerDomElement)) {
+                toggleAnimateFooter(true)
             }
         }
 
@@ -47,7 +52,7 @@ const Home = ({
             <Quote animate={animateQuote} />
             <Skills animate={animateSkills} />
             <CurrentRole animate={animateCurrentRole}/>
-            <Footer />
+            <Footer animate={animateFooter} />
         </main>
     )
 }

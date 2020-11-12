@@ -67,7 +67,7 @@ const JobDescription = forwardRef( (props, ref) => {
                         </div>
                         <div className="list-item">
                             <span className="open-tag">li</span>
-                                ISML
+                                ISML (template engine based on xml and ejs)
                             <span className="closing-tag">li</span>
                         </div>
                         <div className="list-item">

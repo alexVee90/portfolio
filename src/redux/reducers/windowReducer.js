@@ -4,7 +4,8 @@ const initialState = {
     quoteOffsetTop: 0,
     skillsDomElement: {},
     quoteDomElement: {},
-    currentRoleDomElement: {}
+    currentRoleDomElement: {},
+    footerDomElement: {}
 }
 
 export default (state = initialState, action) => {
@@ -28,7 +29,12 @@ export default (state = initialState, action) => {
             return {
                 ...state, 
                 currentRoleDomElement: action.payload
-            }
+            };
+        case types.UPDATE_FOOTER_DOM_ELEMENT: 
+            return {
+                ...state,
+                footerDomElement: action.payload
+            };
         default: 
             return {
                 ...state

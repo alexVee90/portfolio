@@ -1,11 +1,8 @@
 .Footer {
-    position: sticky;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
     width: 100%;
     padding: 4rem;
     text-align: center;
+    opacity: 0;
 
 
     .info-container {
@@ -19,12 +16,21 @@
 
         li {
             margin: 1rem;
+            transition: all 1s;
+
+            &:hover {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
+        
+
     }
 
     p {
         margin: 1.5rem;
     }
+
 
     .social {
         width: 30%;
@@ -32,6 +38,29 @@
         display: flex;
         justify-content: space-evenly;
 
+        a {
+            transition: all 1s;
+
+            &:hover {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+    }    
+    
+    &.fade-footer-in {
+        animation: 2s linear forwards fadeFooterIn;
     }
 
+}
+
+@keyframes fadeFooterIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

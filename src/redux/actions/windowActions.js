@@ -34,3 +34,10 @@ export const updateCurrentRoleDomElement = currentRoleElement => {
         payload: currentRoleElement
     }
 }
+
+export const updateFooterDomElement = footerDomElement => {
+    return {
+        type: types.UPDATE_FOOTER_DOM_ELEMENT,
+        payload: footerDomElement
+    }
+}

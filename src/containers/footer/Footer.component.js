@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import './Footer.style.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Footer = () => {
+import * as windowActions from '../../redux/actions/windowActions';
+
+const Footer = (props) => {
+
+    const footerBreakpoint = useRef(null);
+
+    useEffect( () => {
+        props.updateFooterDomElement(footerBreakpoint.current)
+    }, [])
+
+
     return (
-        <footer className="Footer">
+        <footer className={`Footer ${props.animate ? 'fade-footer-in' : ''}`}>
             <ul className="info-container">
                 <li># : <a href="tel:+40">0766812794</a></li>
                 <li>@ : <a href="mailto:">alexandrucristianvisan.com</a></li>
             </ul>
             
-            <p>&copy; 2020 - Alex Visan</p>
+            <p ref={footerBreakpoint}>&copy; 2020 - Alex Visan</p>
 
             <div className="social">
-                <a href="https://github.com" target="_blank" rel="noreferrer nofollow">
+                <a href="https://github.com/alexVee90" target="_blank" rel="noreferrer nofollow">
                     <FontAwesomeIcon icon={['fab', 'github']} size='3x' />
                 </a>
-                <a href="https://linkedin.com" target="blank" rel="noreferrer nofollow">
+                <a href="https://www.linkedin.com/in/alexandru-cristian-visan-5bab6a103" target="blank" rel="noreferrer nofollow">
                     <FontAwesomeIcon icon={['fab', 'linkedin']} size='3x' />
                 </a>
             </div>
@@ -26,4 +37,8 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+const mapDispatchToProps = dispatch => ({
+    updateFooterDomElement: (footerDomElement) => dispatch(windowActions.updateFooterDomElement(footerDomElement))
+})
+
+export default connect(null, mapDispatchToProps)(Footer);
