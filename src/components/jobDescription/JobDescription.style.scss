@@ -1,0 +1,84 @@
+
+$color: #ccc; 
+
+.job-description {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    color: $color;
+    opacity: 0;
+
+    div {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .open-tag,
+    .closing-tag,
+    .tag-self-closing span {
+        color: #7866eb;
+    }
+
+    .open-tag::before {
+        content: '<';
+        color: $color;
+    }
+
+    .open-tag::after {
+        content: '>';
+        color: $color;
+    }
+
+    .closing-tag::before {
+        content: '</';
+        color: $color;
+    }
+
+    .closing-tag::after {
+        content: '>';
+        color: $color;
+    }
+
+    .tag-self-closing::before {
+        content: '<';
+        color: $color;
+    }
+
+    .tag-self-closing::after {
+        content: '/>';
+        color: $color
+    }
+
+    .job-title, 
+    .company,
+    .tag-self-closing,
+    .description,
+    .technology-stack {
+        margin-left: 3rem
+    }
+
+    .list-of-tech {
+        margin-left: 6rem;
+    }
+
+    .list-item-container {
+        display: inline-block;
+        margin-left: 9rem;
+    }
+
+}
+
+.fade-jd-in {
+    animation: 2s linear forwards fadeJDIn;
+}
+
+@keyframes fadeJDIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}

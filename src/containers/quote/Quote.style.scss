@@ -1,0 +1,38 @@
+.Quote {
+    display: flex;
+    height: 80vh;
+    overflow: hidden;
+
+    &-img-container {
+        width: 50%;
+    }
+
+    &-txt {
+        width: 50%;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        p {
+            width: 70%;
+        }
+    }
+
+    .fade-in {
+        animation: 2s linear forwards fadeIn;
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

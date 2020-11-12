@@ -1,0 +1,16 @@
+.Galaxy {
+    position: absolute;
+    bottom: -110px;
+    right: -150px;
+    z-index: 2;
+    overflow: hidden;
+    animation: roateGalaxy 180s linear infinite forwards ;
+}
+
+@keyframes roateGalaxy {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}

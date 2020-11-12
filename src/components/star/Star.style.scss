@@ -1,0 +1,36 @@
+.Star {
+    margin-right: 1rem;
+    position: relative;
+    left: -2500px;
+    color: #a061bb;
+    opacity: 0.8;
+    font-size: 3.5rem;
+}
+
+.turn-1 {
+    animation: fromLeft 0.5s linear 0.25s forwards;
+}
+
+.turn-2 {
+    animation: fromLeft 0.5s linear 0.45s forwards;
+}
+
+.turn-3 {
+    animation: fromLeft 0.5s linear 0.65s forwards;
+}
+
+.turn-4 {
+    animation: fromLeft 0.5s linear 0.85s forwards;
+}
+.turn-5 {
+    animation: fromLeft 0.5s linear 1s forwards;
+}
+
+@keyframes fromLeft {
+    from { 
+        left: -2500px;
+    } 
+    to {
+        left: 0;
+    }
+}

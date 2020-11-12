@@ -1,0 +1,33 @@
+.Skills {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    ul {
+        position: relative;
+        list-style-type: none;
+        margin: 2rem;
+        font-size: 3rem;
+    }
+
+    &-name {
+        right: -2500px;
+    }
+
+}
+
+.animate-left {
+    animation: fromRight 0.5s linear forwards;
+}
+
+@keyframes fromRight {
+    from { 
+        right: -2500px;
+    } 
+    to {
+        right: 0;
+    }
+}

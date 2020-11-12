@@ -1,0 +1,64 @@
+.Hero {
+    width: 45%;
+    text-align: center;   
+
+    &-role {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    &-name {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &-btn-section {
+        margin-top: 1.5rem;
+
+        .btn {
+            background: inherit;
+            border: 1px solid black;
+            color: black;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin: 0.5rem;
+            font-size: 1.2rem;
+            transition: all 0.4s;
+            text-decoration: none;
+
+            &:hover {
+                background: black;
+                color: white;
+            }
+        }
+    }
+}
+
+.fade-in {
+    animation: fadeTextIn 2.5s;
+}
+
+.fade-out {
+    animation: fadeTextOut 1.5s forwards;
+
+}
+
+@keyframes fadeTextIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeTextOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

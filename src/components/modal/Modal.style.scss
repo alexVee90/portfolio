@@ -1,0 +1,40 @@
+.Modal {
+    height: 100vh;
+    background: #272727;
+    position: fixed;
+    top: -2000px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.topToBottom {
+    animation: topToBottom 1s forwards;
+}
+
+.bottomToTop {
+    animation: bottomToTop 1s forwards;
+}
+
+@keyframes topToBottom {
+    from {
+        top:-2000px
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes bottomToTop {
+    from {
+        top: 0;
+    }
+    to {
+        top: -2000px;
+    }
+}
