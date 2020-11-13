@@ -6,9 +6,9 @@ const ShowcaseItem = (props) => {
     return (
         <article className="Projects-showcase">
             <div className="showcase-item">
-                <a className="img-container">
+                <span className="img-container">
                     <img src={props.imgSource} alt="naturabisse"/>
-                </a>
+                </span>
             </div>
         </article>
     )

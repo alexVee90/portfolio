@@ -11,6 +11,7 @@ import Projects from '../../containers/projects/Projects.component';
 import Footer from '../../containers/footer/Footer.component';
 
 import Modal from '../../components/modal/Modal.component';
+import ModalContent from '../../components/modalContent/ModalContent.component';
 
 import inView from '../../helpers/inView';
 
@@ -49,7 +50,7 @@ const Home = ({
     return(
         <main className="main">
             <Modal modalClasses={modalClasses}>
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam asperiores ut consequatur totam iste harum ipsa fugit repellendus, voluptates fuga placeat modi, aut odit molestias aliquam optio quam sed distinctio.</span>
+                <ModalContent />
             </Modal>
             <Landing />
             <Quote animate={animateQuote} />

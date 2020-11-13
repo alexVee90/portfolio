@@ -3,11 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    // height: 80vh;
 
-    h2 {
+    &-title {
         position: relative;
+        margin-top: 5rem;
 
         &::before {
             content: '';
@@ -23,7 +22,7 @@
     }
 
     .container {
-        margin: 10rem 0;
+        margin: 7rem 0 10rem;
     }
 
 }
