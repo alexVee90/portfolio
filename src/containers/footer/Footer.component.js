@@ -19,8 +19,8 @@ const Footer = (props) => {
     return (
         <footer className={`Footer ${props.animate ? 'fade-footer-in' : ''}`}>
             <ul className="info-container">
-                <li># : <a href="tel:+40">0766812794</a></li>
-                <li>@ : <a href="mailto:">alexandrucristianvisan.com</a></li>
+                <li># : <a href="tel:+40766812794">0766812794</a></li>
+                <li>@ : <a href="mailto:alexandrucristianvisan.com">alexandrucristianvisan.com</a></li>
             </ul>
             
             <p ref={footerBreakpoint}>&copy; 2020 - Alex Visan</p>

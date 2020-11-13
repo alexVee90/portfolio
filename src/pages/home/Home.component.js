@@ -7,6 +7,7 @@ import Landing from '../../containers/landing/Landing.component';
 import Quote from '../../containers/quote/Quote.component';
 import Skills from '../../containers/skills/Skills.component';
 import CurrentRole from '../../containers/currentRole/CurrentRole.component';
+import Projects from '../../containers/projects/Projects.component';
 import Footer from '../../containers/footer/Footer.component';
 
 import Modal from '../../components/modal/Modal.component';
@@ -54,7 +55,7 @@ const Home = ({
             <Quote animate={animateQuote} />
             <Skills animate={animateSkills} />
             <CurrentRole animate={animateCurrentRole}/>
-            <section style={{height: '80vh'}}></section>
+            <Projects />
             <Footer animate={animateFooter} />
         </main>
     )
