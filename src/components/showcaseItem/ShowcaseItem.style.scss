@@ -1,0 +1,66 @@
+.Projects {
+
+    &-showcase {
+
+        perspective: 1500px;
+        transform-style: preserve-3d;
+
+        .showcase-item {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+            overflow: hidden;
+            cursor: pointer;
+
+            -webkit-box-shadow: 0px 6px 13px 0px rgba(50, 50, 50, 0.66);
+            -moz-box-shadow:    0px 6px 13px 0px rgba(50, 50, 50, 0.66);
+            box-shadow:         0px 6px 13px 0px rgba(50, 50, 50, 0.66);    
+
+            transform: rotateX(45deg);
+            transition: all 1s;
+
+            .img-container {
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #f1f1f1;
+                    opacity: 0.9;
+                    transition: all 1s;
+
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+
+            &:hover {
+
+                transform: rotateX(0deg);
+
+                .img-container::before {
+                    opacity: 0;
+                }
+
+
+            }
+
+
+        }
+
+
+
+    }
+
+}
