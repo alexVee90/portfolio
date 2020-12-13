@@ -12,13 +12,11 @@ const ModalContent = () => {
     }
 
     const clearSelected = e => {
-        setState( oldState => {
-            return {
+        setState( oldState => ({
                 ...oldState,
                 selected: false,
                 selection: oldState.selection
-            }
-        })
+        }))
     }
 
     return (
@@ -38,7 +36,7 @@ const ModalContent = () => {
             </div>
         </section>
     )
-}
+}   
 
 export default ModalContent;
 

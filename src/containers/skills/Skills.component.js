@@ -17,18 +17,22 @@ const Skills = (props) => {
 
     return (
         <section className="Skills">
-            <ul className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+            
+            <ul>
                 {skills.map(item => {
                     return item.name === 'react'
-                            ? <li key={item.name}>{item.name}</li>
-                            : <li ref={skillsBreakpoint} key={item.name}>{item.name}</li>
+                            ? (<li key={item.name}>
+                                <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+                                    {item.name}
+                                </span> 
+                                <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>)
+                            :(<li ref={skillsBreakpoint} key={item.name}>
+                                <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+                                    {item.name} 
+                                </span>
+                                <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>)
                 })}
             </ul>
-            <ul className="Skills-ratings">
-                {skills.map(item => {
-                    return <RatingRow key={item.name} animate={props.animate} numberOfStars={item.stars} />
-                })}
-            </ul> 
         </section>
     )
 }

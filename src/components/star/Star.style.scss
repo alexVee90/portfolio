@@ -5,6 +5,9 @@
     color: #a061bb;
     opacity: 0.8;
     font-size: 3.5rem;
+    @media screen and (max-width: 770px) {
+        font-size: 3rem;
+    }
 }
 
 .turn-1 {

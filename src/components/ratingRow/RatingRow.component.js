@@ -27,9 +27,9 @@ const RatingRow = (props) => {
     }
 
     return (
-        <li>
+        <span>
             {result}
-        </li>
+        </span>
     )
 }
 

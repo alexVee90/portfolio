@@ -4,7 +4,10 @@
     right: -150px;
     z-index: 2;
     overflow: hidden;
-    animation: roateGalaxy 180s linear infinite forwards ;
+    animation: roateGalaxy 180s linear infinite forwards;
+    @media screen and (max-width: 420px) {
+        left: -160px;
+    }
 }
 
 @keyframes roateGalaxy {

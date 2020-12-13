@@ -2,9 +2,15 @@
     display: flex;
     min-height: 80vh;
     overflow: hidden;
+    @media screen and (max-width: 1025px) {
+        min-height: 50vh;
+    }
 
     &-img-container {
         width: 50%;
+        @media screen and (max-width: 770px) {
+            display: none;
+        }
     }
 
     &-txt {
@@ -14,9 +20,27 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
+        @media screen and (max-width: 1025px) {
+            font-size: 3.5rem;
+        }
+        @media screen and (max-width: 770px) {
+            width: 100%;
+            font-size: 3rem;
+            @media screen and (max-width: 420px) {
+                font-size: 2rem;
+            }
+        }
 
         p {
             width: 70%;
+            @media screen and (max-width: 770px) {
+                width: 100%;
+                padding: 2rem;
+                text-align: center;
+            }
+            @media screen and (max-width: 420px) {
+                padding: 1rem;
+            }
         }
     }
 

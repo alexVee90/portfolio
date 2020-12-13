@@ -10,6 +10,18 @@
     text-decoration: none;
     text-align: center;
     transform: translateX(-50%);
+    @media screen and (max-width: 1025px) {
+        top: 100px;
+        padding: 3.5rem;
+    }
+    @media screen and (max-width: 770px) {
+        top: 50px;
+        padding: 4rem;
+    }
+    @media screen and (max-width: 420px) {
+        top: 30px;
+        padding: 5rem 5rem 0;
+    }
 
     .line {
         display: inline-block;

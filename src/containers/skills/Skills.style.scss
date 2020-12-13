@@ -5,16 +5,33 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    @media screen and (max-width: 1025px) {
+        min-height: 40vh;
+    }
 
     ul {
-        position: relative;
         list-style-type: none;
-        margin: 2rem;
-        font-size: 3rem;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 420px) {
+                flex-direction: column;
+                margin-top: 2rem;
+            }
+        }
     }
 
     &-name {
+        position: relative;
+        margin-right: 1rem;
+        font-size: 3rem;
         right: -2500px;
+        @media screen and (max-width: 420px) {
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
     }
 
 }

@@ -9,6 +9,10 @@
         color: white;
         width: 100%;
         justify-content: space-evenly;
+        @media screen and (max-width: 420px) {
+            align-items: center;
+            flex-direction: column;
+        }
 
         li {
             position: relative;
@@ -46,6 +50,11 @@
         right: 0;
         width: 70%;
         margin: 0 auto;
+       @media screen and (max-width: 420px) {
+           h2 {
+               font-size: 1.1rem;
+           }
+       } 
 
         a {
             color: white;
