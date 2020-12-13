@@ -4,7 +4,7 @@ $color: #ccc;
 .job-description {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 10%;
     transform: translateY(-50%);
     color: $color;
     opacity: 0;
@@ -12,6 +12,14 @@ $color: #ccc;
     div {
         margin-bottom: 1rem;
         font-size: 1.3rem;
+        @media screen and (max-width: 770px) {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 420px) {
+            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+        }
     }
 
     .open-tag,
@@ -55,16 +63,26 @@ $color: #ccc;
     .tag-self-closing,
     .description,
     .technology-stack {
-        margin-left: 3rem
+        margin-left: 3rem;
+        @media screen and (max-width: 420px) {
+            margin-left: 1.5rem;
+        }
     }
 
     .list-of-tech {
         margin-left: 6rem;
+        @media screen and (max-width: 420px) {
+            margin-left: 3rem;
+        }
+        
     }
 
     .list-item-container {
         display: inline-block;
         margin-left: 9rem;
+        @media screen and (max-width: 420px) {
+            margin-left: 4.5rem;
+        }
     }
 
 }

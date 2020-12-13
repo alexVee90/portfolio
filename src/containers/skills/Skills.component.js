@@ -15,11 +15,34 @@ const Skills = (props) => {
        props.updateSkillsDomElement(skillsBreakpoint.current);
     }, []);
 
+    let result = skills.map(item => {
+
+        if(window.innerWidth < 421 && item.name === 'Javascript') {
+            return <li ref={skillsBreakpoint} key={item.name}>
+            <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+                {item.name}
+            </span> 
+            <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>
+        } else if(item.name === 'React' && window.innerWidth > 421) {
+            return <li ref={skillsBreakpoint} key={item.name}>
+                <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+                    {item.name}
+                </span> 
+                <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>
+        } else {
+            return <li key={item.name}>
+                <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
+                    {item.name} 
+                </span>
+                <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>
+        }
+    });
+
     return (
         <section className="Skills">
             
             <ul>
-                {skills.map(item => {
+                {/* {skills.map(item => {
                     return item.name === 'react'
                             ? (<li key={item.name}>
                                 <span className={`Skills-name ${props.animate ? 'animate-left' : ''}`}>
@@ -31,7 +54,8 @@ const Skills = (props) => {
                                     {item.name} 
                                 </span>
                                 <RatingRow animate={props.animate} numberOfStars={item.stars} /></li>)
-                })}
+                })} */}
+                {result}
             </ul>
         </section>
     )

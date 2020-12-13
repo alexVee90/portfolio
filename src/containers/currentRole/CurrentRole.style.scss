@@ -2,6 +2,15 @@
     height: 90vh;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 1025px) {
+        height: 70vh;
+    }
+    @media screen and (max-width: 770px) {
+        margin-top: 8rem;
+    }
+    @media screen and (max-width: 420px) {
+        margin-top: 2rem;
+    }
 
     &-img-container {
         width: 100%;

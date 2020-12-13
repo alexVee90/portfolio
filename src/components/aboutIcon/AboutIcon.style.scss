@@ -3,7 +3,7 @@
     top: 50px;
     left: 50%;
     width: 7%;
-    z-index: 3;
+    z-index: 7;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -74,7 +74,7 @@
 
 .AboutIcon.x-icon {
     position: fixed;
-    z-index: 3;
+    z-index: 7;
 
     .AboutIcon-text {
         opacity: 0;
