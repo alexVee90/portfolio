@@ -5,11 +5,11 @@ import './ShowcaseItem.style.scss';
 const ShowcaseItem = (props) => {
     return (
         <article className="Projects-showcase">
-            <div className="showcase-item">
+            <a href={props.url} target="_blank" className="showcase-item">
                 <span className="img-container">
                     <img src={props.imgSource} alt="naturabisse"/>
                 </span>
-            </div>
+            </a>
         </article>
     )
 }

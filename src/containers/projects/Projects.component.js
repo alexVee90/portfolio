@@ -14,8 +14,8 @@ const Projects = () => {
 
             <h2 className="Projects-title">Some of the projects I collaborated on</h2>
             <div className="container">
-                <ShowcaseItem imgSource={solana} />
-                <ShowcaseItem imgSource={naturabisse} />
+                <ShowcaseItem imgSource={solana} url="https://www.tiendasolana.com"/>
+                <ShowcaseItem imgSource={naturabisse} url="https://www.naturabisse.com"/>
             </div>
 
         </section>

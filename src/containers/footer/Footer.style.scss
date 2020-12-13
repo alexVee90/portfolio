@@ -10,6 +10,9 @@ $textColor: white;
     background: rgb(124,97,187);
     background: linear-gradient(333deg, rgba(124,97,187,1) 0%, rgba(96,63,203,1) 58%, rgba(149,135,191,1) 100%);
 
+    @media screen and (max-width: 770px) {
+        padding: 1rem;
+    }
     @media screen and (max-width: 420px) {
         padding: 1rem;
     }
@@ -23,6 +26,12 @@ $textColor: white;
         margin: 0 auto;
         font-size: 2rem;
 
+        @media screen and (max-width: 1025px) {
+            width: 80%;
+        }
+        @media screen and (max-width: 770px) {
+            width: 100%;
+        }
         @media screen and (max-width: 420px) {
             width: 100%;
             flex-direction: column;
@@ -31,6 +40,9 @@ $textColor: white;
         li {
             margin: 1rem;
             transition: all 1s;
+            @media screen and (max-width: 770px) {
+                margin: 1rem 0.5rem 0 0;
+            }
             @media screen and (max-width: 420px) {
                 margin: 0rem;
                 margin-top: 1rem;
