@@ -57,22 +57,30 @@ export default connect(null, mapDispatchToProps)(Skills);
 const skills = [
     {
         name: 'HTML & CSS',
-        stars: 4
+        stars: 5
     },
     {
         name: 'Javascript',
-        stars: 4
+        stars: 5
     },
     {
         name: 'React',
-        stars: 3
+        stars: 5
     },
     {
         name: 'NodeJS',
+        stars: 4
+    },
+    {
+        name: 'Golang',
         stars: 3
     },
     {
         name: 'MongoDB',
+        stars: 3
+    },
+    {
+        name: 'SQL Databases',
         stars: 2
-    }
+    },
 ];

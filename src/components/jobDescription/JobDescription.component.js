@@ -10,13 +10,13 @@ const JobDescription = forwardRef( (props, ref) => {
 
                 <div ref={ref} className='job-title'>
                     <span className="open-tag">JobTitle</span>
-                        Fullstack Demandware Developer 
+                        React Developer 
                     <span className="closing-tag">JobTitle</span>
                 </div>
 
                 <div className="company">
                     <span className="open-tag">Company</span>
-                        OSF Digital
+                        Luxoft
                     <span className="closing-tag">Company</span>
                 </div>
                 
@@ -26,7 +26,7 @@ const JobDescription = forwardRef( (props, ref) => {
 
                 <div className="description">
                     <span className="open-tag">Description</span>
-                        Developing applications and new features using Salesforce's Demandware Technology.
+                        Developing applications and new features using React.
                     <span className="closing-tag">Description</span>
                 </div>
                 
@@ -42,7 +42,7 @@ const JobDescription = forwardRef( (props, ref) => {
                         </div>
                         <div className="list-item">
                             <span className="open-tag">li</span>
-                                HTMl & CSS
+                                HTML & CSS
                             <span className="closing-tag">li</span>
                         </div>
                         <div className="list-item">
@@ -52,22 +52,12 @@ const JobDescription = forwardRef( (props, ref) => {
                         </div>
                         <div className="list-item">
                             <span className="open-tag">li</span>
-                                Jquery
+                                React
                             <span className="closing-tag">li</span>
                         </div>
                         <div className="list-item">
                             <span className="open-tag">li</span>
-                                NodeJS
-                            <span className="closing-tag">li</span>
-                        </div>
-                        <div className="list-item">
-                            <span className="open-tag">li</span>
-                                Express
-                            <span className="closing-tag">li</span>
-                        </div>
-                        <div className="list-item">
-                            <span className="open-tag">li</span>
-                                ISML (template engine based on xml and ejs)
+                                Redux
                             <span className="closing-tag">li</span>
                         </div>
                         <div className="list-item">
@@ -77,7 +67,7 @@ const JobDescription = forwardRef( (props, ref) => {
                         </div>
                         <div className="list-item">
                             <span className="open-tag">li</span>
-                                Git & Github
+                                Git & Github & Gerrit
                             <span className="closing-tag">li</span>
                         </div>
                         <div className="list-item">
