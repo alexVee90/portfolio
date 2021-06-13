@@ -3,7 +3,7 @@ import * as types from '../actions/types';
 const initialState = {
     currentIndex: 0,
     fadeIn: true,
-    roles: ['Frontend Developer', 'Backend Developer', 'Demandware Developer']
+    roles: ['Frontend Developer', 'Backend Developer', 'Fullstack Developer']
 }
 
 export default ( state = initialState, action ) => {
